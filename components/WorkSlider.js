@@ -19,42 +19,42 @@ import Link from "next/link";
 const workSlides = {
   slides: [
     {
-      images: [
+      projects: [
         {
-          title: "title",
-          path: "/furnito.jpg.png",
+          path: "/projects/netflixo.webp",
+          href:'https://netflixo.vercel.app/'
         },
         {
-          title: "title",
-          path: "/thumb2.jpg",
+          path: "/projects/medical-system.webp",
+          href:'https://netflixo.vercel.app/'
         },
         {
-          title: "title",
           path: "/thumb3.jpg",
+          href:'https://netflixo.vercel.app/'
         },
         {
-          title: "title",
           path: "/thumb4.jpg",
+          href:'https://netflixo.vercel.app/'
         },
       ],
     },
     {
-      images: [
+      projects: [
         {
-          title: "title",
-          path: "/thumb4.jpg",
+          path: "/projects/chat.webp",
+          href:'https://netflixo.vercel.app/'
         },
         {
-          title: "title",
           path: "/thumb1.jpg",
+          href:'https://netflixo.vercel.app/'
         },
         {
-          title: "title",
           path: "/thumb2.jpg",
+          href:'https://netflixo.vercel.app/'
         },
         {
-          title: "title",
           path: "/thumb3.jpg",
+          href:'https://netflixo.vercel.app/'
         },
       ],
     },
@@ -75,7 +75,7 @@ const WorkSlider = () => {
         return (
           <SwiperSlide key={index}>
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
-              {slide.images.map((img, index) => {
+              {slide.projects.map((project, index) => {
                 return (
                   <div
                     key={index}
@@ -83,9 +83,9 @@ const WorkSlider = () => {
                   >
                     <div className="flex items-center justify-center relative overflow-hidden group">
                       {/*image*/}
-                      <Image src={img.path} width={500} height={300} alt="" />
+                      <Image src={project.path} width={500} height={300} alt="" />
                       {/* overlay */}
-                      <Link href='https://furnito-ecommerce-ic6j.vercel.app' passHref >
+                      <Link href={project.href} passHref >
                         <div
                           className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd]
                         opacity-0 group-hover:opacity-80 transition-all duration-700 flex justify-center"

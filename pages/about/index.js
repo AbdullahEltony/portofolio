@@ -22,7 +22,6 @@ import {
   SiNextdotjs,
   SiFramer,
   SiAdobexd,
-  SiAdobephotoshop,
 } from "react-icons/si";
 
 //  data
@@ -70,6 +69,10 @@ const aboutData = [
       {
         title: "Computer Science  - Fayoum University",
         stage: "2021 - present",
+      },
+      {
+        title: "MERN Stack  - ITI Training",
+        stage: "2024",
       },
     ],
   },
